@@ -34,7 +34,7 @@ EspMQTTClient::EspMQTTClient(
 EspMQTTClient::EspMQTTClient(
   const char* wifiSsid,
   const char* wifiPassword,
-  const char* wifiBssid,
+  const byte wifiBssid,
   const char* mqttServerIp,
   const char* mqttClientName,
   const uint16_t mqttServerPort) :
@@ -45,7 +45,7 @@ EspMQTTClient::EspMQTTClient(
 EspMQTTClient::EspMQTTClient(
   const char* wifiSsid,
   const char* wifiPassword,
-  const char* wifiBssid,
+  const byte wifiBssid,
   const char* mqttServerIp,
   const char* mqttUsername,
   const char* mqttPassword,
@@ -537,7 +537,7 @@ void EspMQTTClient::setKeepAlive(uint16_t keepAliveSeconds)
   _mqttClient.setKeepAlive(keepAliveSeconds);
 }
 
-void EspMQTTClient::setWifiCredentials(const char* wifiSsid, const char* wifiPassword, const char* wifiBssid)
+void EspMQTTClient::setWifiCredentials(const char* wifiSsid, const char* wifiPassword, const byte wifiBssid)
 {
   _wifiSsid = wifiSsid;
   _wifiPassword = wifiPassword;
