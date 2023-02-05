@@ -47,6 +47,7 @@ private:
   unsigned long _nextWifiConnectionAttemptMillis;
   unsigned int _wifiReconnectionAttemptDelay;
   const char* _wifiSsid;
+  const char* _wifiBssid;
   const char* _wifiPassword;
   WiFiClient _wifiClient;
 
@@ -105,6 +106,7 @@ public:
   EspMQTTClient(
     const char* wifiSsid,
     const char* wifiPassword,
+    const char* wifiBssid,
     const char* mqttServerIp,
     const char* mqttClientName = DEFAULT_MQTT_CLIENT_NAME,
     const uint16_t mqttServerPort = 1883);
@@ -113,6 +115,7 @@ public:
   EspMQTTClient(
     const char* wifiSsid,
     const char* wifiPassword,
+    const char* wifiBssid,
     const char* mqttServerIp,
     const char* mqttUsername,
     const char* mqttPassword,
@@ -165,7 +168,7 @@ public:
   };
 
   // Wifi related
-  void setWifiCredentials(const char* wifiSsid, const char* wifiPassword);
+  void setWifiCredentials(const char* wifiSsid, const char* wifiPassword, const char* wifiBssid);
 
   // Other
   void executeDelayed(const unsigned long delay, DelayedExecutionCallback callback);

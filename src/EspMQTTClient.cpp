@@ -33,8 +33,8 @@ EspMQTTClient::EspMQTTClient(
 // Wifi and MQTT handling
 EspMQTTClient::EspMQTTClient(
   const char* wifiSsid,
-  const char* wifiBssid,
   const char* wifiPassword,
+  const char* wifiBssid,
   const char* mqttServerIp,
   const char* mqttClientName,
   const uint16_t mqttServerPort) :
@@ -44,8 +44,8 @@ EspMQTTClient::EspMQTTClient(
 
 EspMQTTClient::EspMQTTClient(
   const char* wifiSsid,
-  const char* wifiBssid,
   const char* wifiPassword,
+  const char* wifiBssid,
   const char* mqttServerIp,
   const char* mqttUsername,
   const char* mqttPassword,
